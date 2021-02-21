@@ -20,7 +20,7 @@
     "tsc": "tsc",
     "test": "echo \"Error: run tests from root\" && exit 1",
     "start": "lerna run start",
-    "build":"lerna run build"
+    "build": "lerna run build"
   },
   "dependencies": {
     "sass": "^1.32.7",
