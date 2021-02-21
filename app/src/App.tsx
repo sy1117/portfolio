@@ -1,12 +1,15 @@
+import React from 'react';
 import NavLink from './components/NavLink';
+import Router from './components/Router';
 import Section from './components/Section';
-import Sidebar from './components/Sidebar';
+// import Sidebar from './components/Sidebar';
 
 const App = () => {
   return (
     <div>
       <NavLink />
       <main>
+        <Router />
         <Section>
           <h1>H1 Hello, I'm Soyoung</h1>
           <h2>H2 Hello, I'm Soyoung</h2>
