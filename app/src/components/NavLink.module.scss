@@ -1,0 +1,118 @@
+@import "../scss/device.scss";
+@import "../scss/colors.mixin.scss";
+
+$nav-height: 3rem;
+$nav-max-width: 100%;
+$content-max-width: 980px;
+
+.placeholder {
+  position: sticky;
+  height: $nav-height;
+}
+
+.root {
+  // position: fixed;
+  position: sticky;
+  background-color: $grey;
+  color: white;
+  top: 0;
+  height: $nav-height;
+  margin: 0;
+  width: 100%;
+  min-width: $nav-max-width;
+
+  .content {
+    margin: 0 auto;
+    max-width: $content-max-width;
+    padding: 0 1rem;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .close,
+  .hamburger {
+    display: none;
+  }
+
+  .mobile {
+    display: none;
+  }
+
+  @include tablet {
+  }
+
+  @include mobile {
+    // max-width: 200px;
+    // min-width: auto;
+    // position: absolute;
+    // height: 100vh;
+
+    .mobile {
+      background: $grey;
+      width: 0;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      -webkit-transition: width 0.3s;
+      transition: width 0.3s;
+
+      &[data-open="true"] {
+        width: 200px;
+        li a {
+          display: block;
+        }
+      }
+      li a {
+        color: white;
+        text-decoration: none;
+        display: none;
+      }
+    }
+
+    .close,
+    .hamburger {
+      display: flex;
+      line-height: 3em;
+      vertical-align: center;
+      padding: 0.5em 0;
+
+      svg {
+        width: 1.5em;
+        height: 1.5em;
+        margin: 0 auto;
+      }
+    }
+
+    .logo {
+      flex: auto;
+    }
+
+    .logo a {
+      padding: 0;
+    }
+
+    .list {
+      display: none;
+    }
+  }
+
+  a {
+    &[href]:hover {
+      background-color: $orchid;
+      // color: $mint;
+    }
+
+    font-size: 1rem;
+    font-weight: bold;
+    line-height: $nav-height;
+    color: white;
+    // width: 100%;
+    padding: 0 2em;
+    letter-spacing: -0.01em;
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    white-space: nowrap;
+  }
+}

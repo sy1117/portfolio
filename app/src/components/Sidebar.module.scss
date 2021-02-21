@@ -1,0 +1,22 @@
+@import "../scss/colors.mixin.scss";
+
+.root {
+  font-size: 1rem;
+  position: absolute;
+  width: 250px;
+  right: 4rem;
+  display: inline-block;
+  font-weight: normal;
+
+  li {
+    a {
+      //   color: $orchid;
+      color: $grey;
+    }
+
+    ol li {
+      //   padding: 0.5em;
+      font-weight: lighter;
+    }
+  }
+}

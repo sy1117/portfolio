@@ -1,0 +1,54 @@
+@import "../scss/device.scss";
+@import "../scss/colors.mixin.scss";
+
+body {
+  font-style: "operato mono";
+  font-size: 18px;
+  line-height: 1.5rem;
+  color: $grey;
+
+  @include mobile {
+    font-size: 16px;
+  }
+}
+
+main {
+  display: grid;
+  margin: 1em;
+}
+
+svg {
+  width: 1.4em;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  padding: 0.2em 0;
+  line-height: 1.2em;
+}
+
+h1 {
+  font-size: 3rem;
+  font-weight: 900;
+}
+
+h2 {
+  font-size: 2rem;
+  // line-height: 1.5em;
+  font-weight: 900;
+}
+
+h3 {
+  font-size: 1.5rem;
+  // line-height: 1.5em;
+  font-weight: 900;
+}
+
+h4 {
+  font-size: 1.2rem;
+  // line-height: 1em;
+  font-weight: 800;
+}
