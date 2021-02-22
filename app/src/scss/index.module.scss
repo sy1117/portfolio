@@ -1,8 +1,11 @@
 @import "../scss/device.scss";
 @import "../scss/colors.mixin.scss";
+@import url("http://fonts.cdnfonts.com/css/operator-mono");
 
 body {
-  font-style: "operato mono";
+  font-family: "NotoSansKR";
+  // font-weight: lighter;
+  // font-style: italic;
   font-size: 18px;
   line-height: 1.5rem;
   color: $grey;
@@ -10,6 +13,20 @@ body {
   @include mobile {
     font-size: 16px;
   }
+}
+
+@font-face {
+  font-family: "Operator Mono";
+  src: url("http://fonts.cdnfonts.com/css/operator-mono");
+  font-style: italic;
+  unicode-range: U+41-5A, U+61-7A;
+}
+
+@font-face {
+  font-family: "NotoSansKR";
+  src: url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+  unicode-range: U+0020-007E;
+  font-style: normal;
 }
 
 main {

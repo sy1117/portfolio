@@ -1,4 +1,4 @@
-import React, { useEffect, FormHTMLAttributes, FormEvent } from "react";
+import React, { useEffect, FormHTMLAttributes, FormEvent, Fragment } from "react";
 import { FormProvider, useForm } from "react-hook-form";
 // import { refine } from "src/module/FormData";
 import Field, { IField, TField, TCompositionField } from "./Field";
@@ -25,7 +25,7 @@ export interface IForm extends FormHTMLAttributes<HTMLFormElement> {
   forceDirtyFields?: Array<string>;
 }
 
-const FormController: React.FC<IForm> = ({
+export const FormController: React.FC<IForm> = ({
   mode = "create",
   validate = "onSubmit",
   data,
@@ -114,7 +114,7 @@ const FormController: React.FC<IForm> = ({
             rules || {}
           );
           if (field.hiddenIf && field.hiddenIf.indexOf(mode) > -1) {
-            return <></>;
+            return <Fragment></Fragment>;
           }
 
           field.props = {

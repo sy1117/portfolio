@@ -38,8 +38,6 @@ const bold = (data: string) => {
     );
 }
 
-
-
 function getChild(data: any, depth: number): any {
     let Component = Elems[depth];
     return Object.keys(data).map((key: any) => {

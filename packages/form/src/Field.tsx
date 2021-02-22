@@ -63,7 +63,7 @@ export interface ValidationNameMessage {
   name: string;
   message: string;
 }
-export interface CustomValidationRules<T> extends RegisterOptions {
+export interface CustomValidationRules extends RegisterOptions {
   equal?: ValidationNameMessage;
   notEqual?: ValidationNameMessage;
   lessThan?: ValidationNameMessage;
@@ -84,7 +84,8 @@ export interface IField<T> {
   disabled?: boolean;
   readOnly?: true;
   value?: string | number | boolean;
-  rules?: CustomValidationRules<T>;
+  // rules?: CustomValidationRules<T>;
+  rules?: CustomValidationRules;
   props?: any;
   hiddenIf?: TFormMode[];
   readOnlyIf?: TFormMode[];

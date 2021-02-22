@@ -11,6 +11,9 @@ $content-max-width: 980px;
 }
 
 .root {
+  font-family: "Operator Mono";
+  font-weight: lighter;
+  font-style: italic;
   // position: fixed;
   position: sticky;
   background-color: $grey;
@@ -20,6 +23,7 @@ $content-max-width: 980px;
   margin: 0;
   width: 100%;
   min-width: $nav-max-width;
+  z-index: 10;
 
   .content {
     margin: 0 auto;

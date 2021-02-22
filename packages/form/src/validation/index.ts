@@ -20,8 +20,8 @@ const validationFnMap = {
 export const mixCustomValidate = (
   control: any,
   type: TField,
-  rules?: CustomValidationRules<unknown>
-): CustomValidationRules<unknown> => {
+  rules?: CustomValidationRules,
+): CustomValidationRules => {
   let result: any = {};
   let validate: any = {};
   if (rules) {

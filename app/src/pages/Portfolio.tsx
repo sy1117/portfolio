@@ -1,13 +1,16 @@
-// import Portfolio÷Content from "../contents/Portfolio.md";
-import Markdown from "../components/Markdown";
+// import { FormController } from "@soyoung/form";
 import Section from "../components/Section";
-import PortfolioContent from "../contents/Portfolio.md";
 
 const PortfolioPage = () => {
     return (
         <Section>
-            <Markdown file={PortfolioContent} />
-        </Section>
+            <h1>Form Builder</h1>
+            <code>
+                code here...
+            </code>
+            {/* <FormController data={[{ type: "text" }]}>
+            </FormController> */}
+        </Section >
     )
 }
 

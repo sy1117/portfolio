@@ -12,8 +12,8 @@ interface INavLinks {
 const NavLink = () => {
 
     const data: INavLinks[] = [
-        { title: "🙋‍♀️ About Me", href: "#" },
-        { title: "🗃 Portfolio", href: "#" },
+        { title: "🙋‍♀️ About Me", href: "/about-me" },
+        { title: "🗃 Portfolio", href: "/portfolio" },
     ]
 
     const hamburgerRef = useRef(null)

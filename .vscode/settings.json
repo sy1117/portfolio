@@ -4,5 +4,13 @@
     "editor.wordWrap": "on",
     "editor.quickSuggestions": false,
     "editor.formatOnSave": false
+  },
+  "[javascriptreact]": {
+    "editor.suggest.insertMode": "replace",
+    "editor.formatOnSave": true
+  },
+  "[typescriptreact]": {
+    "editor.suggest.insertMode": "replace",
+    "editor.formatOnSave": true
   }
 }

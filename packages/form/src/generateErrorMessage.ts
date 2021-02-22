@@ -1,11 +1,11 @@
 import { CustomValidationRules } from "./Field";
 
-type TValidationRules = keyof CustomValidationRules<unknown>;
+type TValidationRules = keyof CustomValidationRules;
 
 const generateMessage = (
   ruleName: TValidationRules,
   label: string,
-  value?: string | number
+  value?: string | number,
 ) => {
   const MessageMap: Partial<Record<TValidationRules, string>> = {
     required: `${label} 을(를) 입력해주세요.`,
@@ -28,7 +28,7 @@ const generateMessage = (
 const generateErrorMessage = (
   label: string,
   name: string,
-  rules: CustomValidationRules<unknown>
+  rules: CustomValidationRules,
 ) => {
   let result: any = {};
   for (let [key, value] of Object.entries(rules)) {
